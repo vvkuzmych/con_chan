@@ -38,7 +38,7 @@ var timeOpen = 10 * time.Second
 
 func main() {
 	// seed our random number generator
-	rand.Seed(time.Now().UnixNano())
+	rand.New(rand.NewSource(time.Now().UnixNano()))
 
 	// print welcome message
 	color.Yellow("The Sleeping Barber Problem")
